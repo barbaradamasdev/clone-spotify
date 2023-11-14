@@ -2,6 +2,8 @@
 
 Projeto do bootcamp Sharp Coders 2023, nesse desafio da ìmã Tech apliquei conceitos essenciais de desenvolvimento web. O objetivo principal foi desenvolver habilidades práticas na construção de interfaces de usuário atraentes e responsivas, utilizando tecnologias como HTML, CSS e JavaScript.
 
+Veja o site ativo aqui: [https://barbaradamasdev.github.io/clone-spotify/](https://barbaradamasdev.github.io/clone-spotify/)
+
 ![Spotify](https://github.com/barbaradamasdev/clone-spotify/blob/main/Spotify-demo.jpg?raw=true)
 
 ## 🚀 Implementações adicionais
