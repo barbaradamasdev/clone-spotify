@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
     <title>Spotify - Música para todos [Clone]</title>
 </head>
 <body>
@@ -12,13 +13,21 @@
         <div class="navbar-container">
             <img src="./img/logo.png" alt="Logo Spotify" class="logo">
 
-            <ul class="navbar-items">
+            
+            <ul class="navbar-items" id="navbar-items">
                 <li class="navbar-item hov-effect-txt">Premium</li>
                 <li class="navbar-item hov-effect-txt">Ajuda</li>
                 <li class="navbar-item hov-effect-txt">Baixar</li>
                 <li class="navbar-item hov-effect-txt">Inscrever</li>
                 <li class="navbar-item hov-effect-txt">Entrar</li>
             </ul>
+            <div id="bg-close-menu" onclick="toggleMenu()"></div>
+
+            <div class="navbar-sandwich" onclick="toggleMenu()">
+                <div id="line1" class="line"></div>
+                <div id="line2" class="line"></div>
+                <div id="line3" class="line"></div>
+            </div>
         </div>
     </navbar>
 
@@ -36,26 +45,28 @@
         <div class="footer-content">
             <img src="./img/logo.png" alt="Logo Spotify" class="logo">
 
-            <ul class="footer-menu">
-                <p>Empresa</p>
-                <li class="footer-menu-item hov-effect-txt">Sobre</li>
-                <li class="footer-menu-item hov-effect-txt">Empregos</li>
-                <li class="footer-menu-item hov-effect-txt">For the record</li>
-            </ul>
-            <ul class="footer-menu">
-                <p>Comunidades</p>
-                <li class="footer-menu-item hov-effect-txt">Para artistas</li>
-                <li class="footer-menu-item hov-effect-txt">Desenvolvedores</li>
-                <li class="footer-menu-item hov-effect-txt">Marcas</li>
-                <li class="footer-menu-item hov-effect-txt">Investidores</li>
-                <li class="footer-menu-item hov-effect-txt">Fornecedores</li>
-            </ul>
-            <ul class="footer-menu">
-                <p>Links úteis</p>
-                <li class="footer-menu-item hov-effect-txt">Ajuda</li>
-                <li class="footer-menu-item hov-effect-txt">Player da Web</li>
-                <li class="footer-menu-item hov-effect-txt">Aplicativo móvel grátis</li>
-            </ul>
+            <div class="footer-menu-group">
+                <ul class="footer-menu">
+                    <p>Empresa</p>
+                    <li class="footer-menu-item hov-effect-txt">Sobre</li>
+                    <li class="footer-menu-item hov-effect-txt">Empregos</li>
+                    <li class="footer-menu-item hov-effect-txt">For the record</li>
+                </ul>
+                <ul class="footer-menu">
+                    <p>Comunidades</p>
+                    <li class="footer-menu-item hov-effect-txt">Para artistas</li>
+                    <li class="footer-menu-item hov-effect-txt">Desenvolvedores</li>
+                    <li class="footer-menu-item hov-effect-txt">Marcas</li>
+                    <li class="footer-menu-item hov-effect-txt">Investidores</li>
+                    <li class="footer-menu-item hov-effect-txt">Fornecedores</li>
+                </ul>
+                <ul class="footer-menu">
+                    <p>Links úteis</p>
+                    <li class="footer-menu-item hov-effect-txt">Ajuda</li>
+                    <li class="footer-menu-item hov-effect-txt">Player da Web</li>
+                    <li class="footer-menu-item hov-effect-txt">Aplicativo móvel grátis</li>
+                </ul>
+            </div>
 
             <div class="socials">
                 <div class="social-item hov-effect-txt">

@@ -13,6 +13,8 @@
     --black: black;
     --gray: #919496;
     --gray-transparency: rgba(0, 0, 0, 0.6);
+
+    --width-container: 85%;
 }
 
 body {
@@ -35,11 +37,11 @@ body {
 }
 
 .btn-primary:hover {
-    background-color: var(--default-green);
+    background-color: var(--dark-green);
 }
 
 .logo {
-    height: 40px;
+    height: 30px;
     width: auto;
     cursor: pointer;
 }
@@ -58,33 +60,90 @@ body {
 #navbar {
     position: fixed;
     width: 100%;
-    display: flex;
-    justify-content: center;
     color: var(--white);
     background-color: var(--gray-transparency);
 }
 
+.navbar-sandwich {
+    cursor: pointer;
+    z-index: 1;
+    position: absolute;
+    right: 30px;
+  }
+  
+  .navbar-sandwich > * + * {
+    margin-top: 6px;
+  }
+  
+  #line1.change {
+    width: 33px;
+    transform: rotate(45deg) translate(7px, 10px);
+  }
+  
+  #line2.change {
+    visibility: hidden;
+    transition: visibility 0s;
+  }
+  
+  #line3.change {
+    width: 33px;
+    transform: rotate(-45deg) translate(2px, -5px);
+  }
+  
+  .line {
+    width: 25px;
+    height: 3px;
+    background-color: var(--white);
+    transition: all 0.7s;
+  }
+
+#bg-close-menu {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.012);
+    width: 100vw;
+    height: 100vh;
+    transform: translateX(1500px);
+    backdrop-filter: blur(3px);
+}
+  
+.active,
+#bg-close-menu.active {
+    transform: translateX(0);
+}
+
 .navbar-container {
-    width: 60%;
+    width: var(--width-container);
     margin: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    max-height: 80px;
     padding: 20px 0;
 }
 
-.navbar-items {
-    display: flex;
-    align-items: center;
-}
+  .navbar-items,
+  .navbar-items::after {
+    position: relative;
+    top: 380px;
+    right: 0;
+    padding: 180px 40px 50px;
+    margin-right: -26px;
+    height: 100vh;
+    z-index: 1;
+    background-color: var(--black);
+    transform: translateX(1000px);
+    transition: transform 500ms ease;
+  }
+
+.navbar-items.active {
+    transform: translateX(0);
+  }
 
 .navbar-item {
     list-style: none;
-    padding: 0 20px;
-}
-
-.navbar-item:nth-child(3) {
-    border-right: 1px solid rgba(255, 255, 255, 0.439);
+    padding: 20px;
 }
 
 /* Showcase */
@@ -104,6 +163,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: var(--width-container);
 }
 
 .showcase-container > * {
@@ -127,10 +187,8 @@ body {
     padding: 20px 0;
 }
 
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    width: 60%;
+.footer-content  {
+    width: var(--width-container);
     margin: auto;
     padding: 80px 0;
 }
@@ -154,7 +212,9 @@ body {
 
 .socials {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 15px;
+    margin: auto;
 }
 
 .social-item svg{
@@ -170,7 +230,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    width: 60%;
+    width: var(--width-container);
     margin: auto;
 }
 
@@ -183,7 +243,6 @@ body {
 
 .footer-info-items {
     list-style: none;
-    display: flex;
 }
 
 .footer-info li{
@@ -202,4 +261,76 @@ body {
     width: auto;
     display: inline-block;
     margin-left: 10px;
+}
+
+.footer-menu {
+    margin: 40px 0;
+}
+
+/* Media > tablet */
+@media  (min-width: 768px) {
+    :root {
+        --width-container: 80%;
+    } 
+
+    .navbar-sandwich {
+        display: none;
+    }
+    
+    .navbar-items,
+  .navbar-items::after {
+        display: flex;
+        align-items: center; 
+        background-color: rgba(255, 255, 255, 0);
+
+        position: inherit;
+    padding: 20px 0;
+    margin: 0;
+    height: inherit;
+    transform: translateX(0);
+  }
+    
+    .navbar-item {
+        list-style: none;
+        padding: 0 20px;
+    }
+    
+    .navbar-item:nth-child(3) {
+        border-right: 1px solid rgba(255, 255, 255, 0.439);
+    }
+
+    .logo {
+        height: 40px;
+    }
+
+    .footer-menu-group {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }    
+}
+
+/* Media > laptop */
+@media  (min-width: 1024px) {
+    :root {
+        --width-container: 60%;
+    } 
+
+    .footer-content{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer-menu {
+        margin: 0 40px;
+    }
+
+    .socials {
+        margin: 0 auto;
+    }
+
+    .footer-info-items {
+        display: flex;
+   }
+    
 }
