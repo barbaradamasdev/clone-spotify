@@ -154,7 +154,7 @@ body {
     justify-content: center;
     align-items: center;
     color: var(--white);
-    background: url("/img/showcase.webp") center center/cover;
+    background: url("./img/showcase.webp") center center/cover;
     background-blend-mode: color;
     background-color: var(--gray-transparency);
 }
