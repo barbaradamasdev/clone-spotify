@@ -22,6 +22,11 @@ body {
     font-weight: bold;
 }
 
+.logo {
+    height: 40px;
+    width: auto;
+}
+
 /* Navbar */
 #navbar {
     position: fixed;
@@ -39,11 +44,6 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 20px 0;
-}
-
-.navbar-container .logo {
-    height: 40px;
-    width: auto;
 }
 
 .navbar-items {
