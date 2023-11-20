@@ -104,7 +104,7 @@ body {
     background-color: rgba(0, 0, 0, 0.012);
     width: 100vw;
     height: 100vh;
-    transform: translateX(1500px);
+    transform: translateX(3500px);
     backdrop-filter: blur(3px);
 }
   
