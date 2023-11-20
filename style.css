@@ -278,16 +278,16 @@ body {
     }
     
     .navbar-items,
-  .navbar-items::after {
+    .navbar-items::after {
         display: flex;
         align-items: center; 
         background-color: rgba(255, 255, 255, 0);
 
         position: inherit;
-    padding: 20px 0;
-    margin: 0;
-    height: inherit;
-    transform: translateX(0);
+        padding: 20px 0;
+        margin: 0;
+        height: inherit;
+        transform: translateX(0);
   }
     
     .navbar-item {
@@ -308,6 +308,10 @@ body {
         justify-content: space-between;
         width: 100%;
     }    
+
+    #bg-close-menu {
+        display:none;
+    }
 }
 
 /* Media > laptop */
